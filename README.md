@@ -1,4 +1,4 @@
-# Conda Package for djang-auth-adfs
+# Conda Package for django-auth-adfs
 
 A Django authentication backend for Microsoft ADFS and AzureAD
 
