@@ -1,8 +1,5 @@
-# Conda Packaging Template
+# Conda Package for djang-auth-adfs
 
-This template repository contains a default setup for building new conda packages via agithub action.
+A Django authentication backend for Microsoft ADFS and AzureAD
 
-## Contents
-
-1. A github action to build conda packages and upload them for MacOS-X, Linux, Windows 74bit pythons v 3/6-3.9
-2. A build environment
+Packaged as BSD 2-Clause "Simplified" License
