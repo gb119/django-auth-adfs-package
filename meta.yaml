@@ -1,0 +1,43 @@
+{% set name = "django-auth-adfs" %}
+{% set version = "1.14.0" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: https://files.pythonhosted.org/packages/4e/fd/dbbc6b653cd4b5f3e27e605b3337e9934254f6a3a03405a6d7cbf8e1ead0/django_auth_adfs-{{ version }}.tar.gz
+  sha256: 5bdd283df8ce5c22c4084ceb6cd4a3bafd35b8323caf10e065975757344a2486
+  
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python >=3.8
+    - pip
+  run:
+    - python >=3.8
+    - django >=3.2
+    - six
+    - requests
+    - urllib3
+    - cryptography
+    - pyjwt[crypto]
+
+test:
+  imports:
+    - django_auth_adfs
+
+about:
+  home: https://github.com/snok/django-auth-adfs
+  license: BSD
+  license_family: BSD
+  license_file: 'LICENSE'
+  summary: 'A Django authentication backend for Microsoft ADFS and AzureAD'''
+  dev_url: https://github.com/snok/django-auth-adfs
+
+extra:
+  recipe-maintainers: https://github.com/gb119/
